@@ -5,7 +5,8 @@
  */
 package kata1;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -17,7 +18,10 @@ public class Kata1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Person p1 = new Person("Alejandro", new Date(97,6,5));
+        Calendar date;
+        date = GregorianCalendar.getInstance();
+        date.set(1997, 7, 5);
+        Person p1 = new Person("Alejandro", date);
         System.out.println(p1.getName() + " tiene: " + p1.getAge() + " años");
     }
     
